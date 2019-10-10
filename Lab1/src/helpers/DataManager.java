@@ -11,13 +11,13 @@ public class DataManager {
     public static void updateData(List<Flight> flights) throws IOException {
         List<List<String>> rows = new LinkedList<>(Arrays.asList());
         for (Flight flight : flights) {
-            rows.add(Arrays.asList(flight.id,
-                    flight.sourceAirport,
-                    flight.destinationAirport,
-                    flight.date,
-                    flight.flightStatus.name(),
-                    flight.plane.getModel(),
-                    Integer.toString(flight.plane.getCountOfPlaces())));
+            rows.add(Arrays.asList(flight.getId(),
+                    flight.getSourceAirport(),
+                    flight.getDestinationAirport(),
+                    flight.getDate(),
+                    flight.getFlightStatus().name(),
+                    flight.getPlane().getModel(),
+                    Integer.toString(flight.getPlane().getCountOfPlaces())));
         }
 
         FileWriter csvWriter = new FileWriter("flights.csv");
@@ -49,7 +49,7 @@ public class DataManager {
         BufferedReader csvReader = new BufferedReader(new FileReader("flights.csv"));
         String row;
         int iteration = 0;
-        List<Flight> flights = new ArrayList<Flight>();
+        List<Flight> flights = new ArrayList<>();
         while ((row = csvReader.readLine()) != null) {
             if(iteration == 0) {
                 iteration++;

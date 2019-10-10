@@ -2,8 +2,6 @@ package com.company;
 
 import Classes.Airport;
 import Classes.Flight;
-import Classes.FlightStatus;
-import Classes.Plane;
 
 import java.util.*;
 import java.io.BufferedReader;
@@ -20,21 +18,20 @@ public class Main {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
         while (work) {
-            airport.showMainMenu();
+            Controller.showMainMenu();
 
             String result = in.readLine();
             switch (result) {
                 case "1":
-                    airport.showFlights();
+                    Controller.showFlights();
                     break;
                 case "2":
-                    airport.addNewFlight();
+                    Controller.addNewFlight();
                     break;
                 case "3":
-                    airport.deleteFlight();
-                    break;
+                    Controller.deleteFlight();
                 case "4":
-                    airport.updateFlight();
+                    Controller.updateFlight();
                     break;
                 case "0":
                     work = false;
