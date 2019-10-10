@@ -1,0 +1,4 @@
+Id;Source;Destination;Date;Status;Plane;CountOfPlaces
+1;Minsk-Airport;Domodedovo;29.09 21.00;OPEN;Airbus;50
+2;Minsk;Japan;21.10;DEPARTED;Airbus;54
+2;Minsk;Domodedovo;11.10 13.15;OPEN;Airbus;100
